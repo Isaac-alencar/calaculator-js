@@ -1,0 +1,122 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/* Container da calculadora */
+div.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  height: 450px;
+
+  margin: 100px auto;
+  background-color: #f2f3f5;
+  border: 1px solid #e6e7e9;
+  cursor: pointer;
+}
+/* Display onde os números e resultado são exibidos */
+div.container .display {
+  padding: 16px;
+
+  width: 100%;
+  height: 200px;
+
+  background-color: #fff;
+  box-shadow: 0px 2px 3px #d7d9da;
+
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  text-align: right;
+  overflow-x: scroll;
+}
+
+div.container .display::-webkit-scrollbar {
+  display: none;
+}
+
+/* KeyBoard com as teclas numéricas e de oprações */
+div.container .keyboard {
+  display: grid;
+  grid-template-columns: 4fr 1fr 28px;
+  grid-template-rows: 1;
+
+  margin: 0 auto;
+
+  width: 100%;
+  height: 100%;
+}
+/* Container das teclas numéricas */
+div.container .keyboard .keys {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: 20px 0;
+
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+}
+/* Cada tecla numérica */
+div.container .keyboard .keys > div {
+  margin: 20px;
+}
+/* Teclas de operações aritiméticas */
+div.container .keyboard .operations {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-left: 1px solid #e6e7e9;
+}
+/* Cada tecla de operação */
+div.container .keyboard .operations > div {
+  margin: 16px;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: 300;
+  color: #1a73e9;
+}
+
+/* Aba expansível que vai abrir algumas opções de calculadora científicas */
+div.container .keyboard .hide-operations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 28px;
+  padding: 5px;
+  background-color: #1a73e9;
+}
+div.container .keyboard .hide-operations .side-toggle {
+  display: none;
+  transition: ease-in 350ms;
+}
+div.container .keyboard .hide-operations .side-toggle.on {
+  z-index: 10;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 24px;
+
+  width: 240px;
+  height: 100%;
+
+  font-family: "Roboto", sans-serif;
+  background-color: #1a73e9;
+  color: #fff;
+}
+div.container .keyboard .hide-operations .side-toggle.on > div {
+  margin: 20px;
+}

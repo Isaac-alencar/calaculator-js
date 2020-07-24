@@ -33,10 +33,31 @@ backSpace.addEventListener("click", () => {
   display.innerText = displayValue.join("");
 });
 
+//Calculando a raíz quadrada, apenas apra demonstração de cálculos avançados
+const calcSqrt = () => {
+  const sentence = "√9";
+
+  const parts = sentence.split("");
+
+  return Math.sqrt(parts[1]);
+};
+
 //Usando a função eval do propŕio javascript para executar uma ação apartir de uma string
 const equalsKey = document
   .querySelector("div#equals")
   .addEventListener("click", () => {
+    if (display.innerText === "√9") {
+      const result = calcSqrt();
+      display.innerText = result;
+    }
     const result = eval(display.innerText);
     display.innerText = result;
+  });
+
+//Animção da sidebar que expande as operações científicas
+const sideToggle = document.querySelector("div.side-toggle");
+const sideBar = document
+  .querySelector("div.hide-operations")
+  .addEventListener("click", () => {
+    sideToggle.classList.toggle("on");
   });

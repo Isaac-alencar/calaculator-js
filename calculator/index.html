@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora com JavaScript</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://code.iconify.design/1/1.0.6/iconify.min.js"
+    ></script>
+    <script defer src="./scripts.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="display"></div>
+      <div class="keyboard">
+        <div class="keys">
+          <div id="key">7</div>
+          <div id="key">8</div>
+          <div id="key">9</div>
+          <div id="key">4</div>
+          <div id="key">5</div>
+          <div id="key">6</div>
+          <div id="key">1</div>
+          <div id="key">2</div>
+          <div id="key">3</div>
+          <div id="key">0</div>
+          <div id="key">,</div>
+          <div id="equals">=</div>
+        </div>
+        <div class="operations">
+          <div class="backspace">
+            <span
+              class="iconify"
+              data-inline="true"
+              data-icon="mdi:backspace-outline"
+              style="color: #1a73e9; font-size: 18px;"
+            ></span>
+          </div>
+          <div id="op">/</div>
+          <div id="op">x</div>
+          <div id="op">-</div>
+          <div id="op">+</div>
+        </div>
+        <div class="hide-operations">
+          <span
+            class="iconify"
+            data-inline="false"
+            data-icon="ic:round-arrow-back-ios"
+            style="color: #fff; font-size: 14px;"
+          ></span>
+          <div class="side-toggle">
+            <div id="key">INV</div>
+            <div id="key">GRAU</div>
+            <div id="key">%</div>
+            <div id="key">sin</div>
+            <div id="key">cos</div>
+            <div id="key">tan</div>
+            <div id="key">ln</div>
+            <div id="key">log</div>
+            <div id="key">&#8730</div>
+            <div id="key">&#x3C0</div>
+            <div id="key">e</div>
+            <div id="key">^</div>
+            <div id="key">(</div>
+            <div id="key">)</div>
+            <div id="key">!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
